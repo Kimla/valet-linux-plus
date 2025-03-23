@@ -60,9 +60,9 @@ $app->command('install [--ignore-selinux] [--mariadb]', function ($ignoreSELinux
     PhpFpm::install();
     DnsMasq::install(Configuration::get('domain'));
     Mailpit::install();
-    ValetRedis::install();
+    //ValetRedis::install();
     Nginx::restart();
-    Mysql::install($mariadb);
+    //Mysql::install($mariadb);
     Ngrok::install();
     Valet::symlinkToUsersBin();
 
@@ -99,8 +99,8 @@ if (is_dir(VALET_HOME_PATH)) {
             PhpFpm::restart();
             Nginx::restart();
             Mailpit::restart();
-            Mysql::restart();
-            ValetRedis::restart();
+            //Mysql::restart();
+            //ValetRedis::restart();
             Writer::info('Valet services have been started.');
 
             return;
@@ -147,8 +147,8 @@ if (is_dir(VALET_HOME_PATH)) {
             PhpFpm::restart();
             Nginx::restart();
             Mailpit::restart();
-            Mysql::restart();
-            ValetRedis::restart();
+            //Mysql::restart();
+            //ValetRedis::restart();
             Writer::info('Valet services have been restarted.');
 
             return;
