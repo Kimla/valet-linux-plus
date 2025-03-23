@@ -21,9 +21,7 @@ class Pacman implements PackageManager
     /**
      * @var array
      */
-    public const PHP_FPM_PATTERN_BY_VERSION = [
-        '8.4' => 'php-fpm'
-    ];
+    public const PHP_FPM_PATTERN_BY_VERSION = [];
 
     private const PACKAGES = [
         'redis' => 'redis',
